@@ -1,0 +1,18 @@
+<svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <filter id="soften" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" />
+    </filter>
+  </defs>
+
+  <g filter="url(#soften)">
+    <circle cx="165" cy="150" r="95" fill="#88A75C" opacity="0.42" />
+    <circle cx="215" cy="105" r="62" fill="#FDCB98" opacity="0.55" />
+    <circle cx="120" cy="95" r="42" fill="#FE8C1C" opacity="0.28" />
+    <circle cx="205" cy="195" r="46" fill="#0A2E52" opacity="0.10" />
+  </g>
+
+  <circle cx="252" cy="62" r="7" fill="#FE8C1C" />
+  <circle cx="70" cy="205" r="5" fill="#88A75C" />
+  <circle cx="245" cy="215" r="4" fill="#0A2E52" opacity="0.5" />
+</svg>
