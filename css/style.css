@@ -285,15 +285,17 @@ p{ margin:0; }
    CTA banner
    ========================================================= */
 .cta-banner{
-  background: var(--navy);
+  position:relative;
+  background: transparent;
   color:#fff;
-  padding-block: 80px;
+  padding-block: 56px;
 }
-.brush-cta{ inset-inline-end:0; top:0; width:100%; height:100%; object-fit:cover; opacity:.5; }
+.brush-cta{ inset-inline-end:0; top:0; width:100%; height:100%; object-fit:fill; opacity:1; }
 .cta-inner{
   position:relative; z-index:1;
   display:grid; grid-template-columns:1fr; gap:36px;
   text-align:center;
+  padding-block: 34px;
 }
 @media (min-width:900px){
   .cta-inner{ grid-template-columns: 1fr 1fr 1fr; text-align:start; align-items:center; }
