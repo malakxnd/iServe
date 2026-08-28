@@ -16,7 +16,7 @@
 
   --font-display: "Cairo", "Segoe UI", sans-serif;
   --font-body:    "Cairo", "Segoe UI", sans-serif;
-  --font-hand:    "Aref Ruqaa", "Caveat", cursive;
+  --font-hand:    "Aref Ruqaa", cursive;
 
   --radius-lg: 26px;
   --radius-md: 18px;
@@ -24,6 +24,17 @@
   --shadow-soft: 0 20px 45px -25px rgba(10,46,82,0.35);
   --shadow-card: 0 14px 34px -20px rgba(10,46,82,0.28);
   --wrap: 1180px;
+}
+
+@font-face{
+  font-family:"Aref Ruqaa"; font-weight:400; font-style:normal;
+  src: url("fonts/ArefRuqaa-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face{
+  font-family:"Aref Ruqaa"; font-weight:700; font-style:normal;
+  src: url("fonts/ArefRuqaa-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 *,*::before,*::after{ box-sizing:border-box; }
@@ -300,17 +311,23 @@ p{ margin:0; }
 @media (min-width:900px){
   .cta-inner{ grid-template-columns: 1fr 1fr 1fr; text-align:start; align-items:center; }
 }
-.cta-headline{ order:3; }
+.cta-headline{ order:3; position:relative; }
 .cta-message{ order:2; }
 .cta-action{ order:1; }
 .cta-headline p{
-  font-family:var(--font-hand); font-size:20px; color:var(--peach);
-  font-weight:700; margin-bottom:4px;
+  font-family:var(--font-display); font-size:20px; color:var(--peach);
+  font-weight:700; margin-bottom:6px;
 }
 .cta-headline h2{
-  font-family:var(--font-hand); color:#fff;
-  font-size: clamp(30px,4vw,42px); font-weight:700; line-height:1.3;
+  font-family:var(--font-display); color:#fff;
+  font-size: clamp(30px,4vw,40px); font-weight:900; line-height:1.3;
+  position:relative; width:fit-content;
 }
+.cta-underline{
+  display:block; width:180px; height:16px; margin-top:2px;
+  overflow:visible;
+}
+@media (min-width:900px){ .cta-underline{ margin-inline-start:auto; } }
 .cta-message h3{ color:#fff; font-size:20px; margin-bottom:8px; }
 .cta-message p{ color:rgba(255,255,255,.75); font-size:14.5px; line-height:1.8; }
 
