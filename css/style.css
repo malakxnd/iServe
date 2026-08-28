@@ -239,9 +239,9 @@ p{ margin:0; }
   width:6px; height:100%; border-radius:4px; background:var(--green);
 }
 @media (max-width:640px){
-  .hero-art{ max-width:300px; margin-inline:auto; padding-bottom:74px; }
+  .hero-art{ max-width:340px; margin-inline:auto; padding-bottom:110px; }
   .hero-caption{
-    font-size:19px; bottom:6px; inset-inline-start:14px; line-height:1.45;
+    font-size:30px; bottom:8px; inset-inline-start:14px; line-height:1.35;
   }
   .hero-caption::before{ inset-inline-start:-12px; }
 }
