@@ -234,7 +234,7 @@ p{ margin:0; }
 .line-orange{ color:var(--orange); position:relative; width:fit-content; }
 .line-orange::after{
   content:""; position:absolute; inset-inline-start:2px; bottom:-6px;
-  width:78%; height:8px; background:var(--peach); border-radius:6px; z-index:-1;
+  width:78%; height:8px; background:var(--navy); border-radius:6px; z-index:-1;
 }
 
 .hero-desc{ font-size:17px; line-height:1.9; color:var(--ink-soft); max-width:560px; margin-bottom:34px; }
@@ -345,6 +345,8 @@ article.extra-card:hover{ transform: translateY(-5px) scale(1.04); box-shadow: 0
 @media (min-width:900px){ .cta-action{ align-items:flex-end; } }
 .contact-line{ display:flex; align-items:center; gap:8px; font-size:14px; color:rgba(255,255,255,.85); font-weight:600; direction:ltr; }
 .contact-line:hover{ color:var(--peach); }
+.cta-banner .btn-orange{ color:#fff; }
+.cta-banner .btn-orange:hover{ color:#fff; }
 
 /* =========================================================
    Footer
