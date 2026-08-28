@@ -21,7 +21,7 @@
 <header class="site-header" id="siteHeader">
   <div class="wrap header-inner">
     <a href="#top" class="brand">
-      <span class="brand-name">iServe</span>
+      <span class="brand-name"><span class="brand-i">i</span>Serve</span>
       <span class="brand-tag">الخدمة عليك والمتابعة علينا</span>
     </a>
 
@@ -67,10 +67,10 @@
         </p>
 
         <ul class="industry-row" data-reveal>
-          <li><img src="assets/02_ecommerce_cart.png" alt=""><span>متاجر إلكترونية</span></li>
-          <li><img src="assets/03_business_buildings.png" alt=""><span>شركات خدمات</span></li>
-          <li><img src="assets/04_clinic_stethoscope.png" alt=""><span>عيادات</span></li>
           <li><img src="assets/05_maintenance_tools.png" alt=""><span>مراكز صيانة</span></li>
+          <li><img src="assets/04_clinic_stethoscope.png" alt=""><span>عيادات</span></li>
+          <li><img src="assets/03_business_buildings.png" alt=""><span>شركات خدمات</span></li>
+          <li><img src="assets/02_ecommerce_cart.png" alt=""><span>متاجر إلكترونية</span></li>
           <li><img src="assets/06_more_options.png" alt=""><span>والمزيد...</span></li>
         </ul>
 
@@ -91,15 +91,9 @@
 
       <div class="feature-grid">
         <article class="feature-card" data-reveal>
-          <img src="assets/07_security_lock.png" alt="" class="feature-icon">
-          <h3>خصوصية وأمان</h3>
-          <p>سرية تامة لبياناتك، ملكية 100% لقاعدة عملائك، وصول مؤمّن، واتفاق سرية عند الطلب.</p>
-        </article>
-
-        <article class="feature-card" data-reveal>
-          <img src="assets/08_followup_48h.png" alt="" class="feature-icon">
-          <h3>متابعة سريعة</h3>
-          <p>نتواصل مع عملائك باسمك، بحد أقصى خلال 48 ساعة، ونسجّل كل الملاحظات فورًا.</p>
+          <img src="assets/10_results_growth.png" alt="" class="feature-icon">
+          <h3>نتائج حقيقية</h3>
+          <p>عملاء راضيين، ولاء مستمر، سمعة أقوى، ودخل أكتر ثباتًا لمشروعك.</p>
         </article>
 
         <article class="feature-card" data-reveal>
@@ -109,9 +103,15 @@
         </article>
 
         <article class="feature-card" data-reveal>
-          <img src="assets/10_results_growth.png" alt="" class="feature-icon">
-          <h3>نتائج حقيقية</h3>
-          <p>عملاء راضيين، ولاء مستمر، سمعة أقوى، ودخل أكتر ثباتًا لمشروعك.</p>
+          <img src="assets/08_followup_48h.png" alt="" class="feature-icon">
+          <h3>متابعة سريعة</h3>
+          <p>نتواصل مع عملائك باسمك، بحد أقصى خلال 48 ساعة، ونسجّل كل الملاحظات فورًا.</p>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <img src="assets/07_security_lock.png" alt="" class="feature-icon">
+          <h3>خصوصية وأمان</h3>
+          <p>سرية تامة لبياناتك، ملكية 100% لقاعدة عملائك، وصول مؤمّن، واتفاق سرية عند الطلب.</p>
         </article>
       </div>
     </div>
@@ -124,10 +124,10 @@
 
       <div class="extra-grid">
         <article class="extra-card" data-reveal>
-          <img src="assets/11_rating_badge.png" alt="" class="extra-icon">
+          <img src="assets/13_thank_you_envelope.png" alt="" class="extra-icon">
           <div>
-            <h3>دعم التقييمات الإيجابية</h3>
-            <p>نشجّع عملاءك الراضين على ترك تقييم إيجابي لخدماتك في التوقيت المناسب.</p>
+            <h3>رسالة شكر تلقائية</h3>
+            <p>نرسل رسائل شكر باسمك لعملائك بعد كل خدمة، لتعزيز العلاقة والولاء.</p>
           </div>
         </article>
 
@@ -140,10 +140,10 @@
         </article>
 
         <article class="extra-card" data-reveal>
-          <img src="assets/13_thank_you_envelope.png" alt="" class="extra-icon">
+          <img src="assets/11_rating_badge.png" alt="" class="extra-icon">
           <div>
-            <h3>رسالة شكر تلقائية</h3>
-            <p>نرسل رسائل شكر باسمك لعملائك بعد كل خدمة، لتعزيز العلاقة والولاء.</p>
+            <h3>دعم التقييمات الإيجابية</h3>
+            <p>نشجّع عملاءك الراضين على ترك تقييم إيجابي لخدماتك في التوقيت المناسب.</p>
           </div>
         </article>
       </div>
@@ -152,7 +152,7 @@
 
   <!-- ===== CTA banner (Slide 3 start) ===== -->
   <section class="section cta-banner" id="perks">
-    <img class="brush brush-cta" src="assets/14_navy_brush_stroke.png" alt="" aria-hidden="true">
+    <canvas class="aurora-canvas" id="auroraCanvas" aria-hidden="true"></canvas>
     <div class="wrap cta-inner">
       <div class="cta-headline" data-reveal>
         <p>نحن نهتم بعملائك..</p>
@@ -219,7 +219,7 @@
   </div>
 
   <div class="footer-bottom">
-    <p>© 2024 iServe. جميع الحقوق محفوظة.</p>
+    <p>© iServe. جميع الحقوق محفوظة.</p>
   </div>
 </footer>
 
