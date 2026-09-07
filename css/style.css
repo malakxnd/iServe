@@ -1,4 +1,23 @@
 /* =========================================================
+   Self-hosted fonts (fallback in case Google Fonts CDN
+   is blocked/slow — keeps the Ruqaa handwritten look reliable)
+   ========================================================= */
+@font-face{
+  font-family:"Aref Ruqaa";
+  src:url("../assets/fonts/ArefRuqaa-Regular.ttf") format("truetype");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
+}
+@font-face{
+  font-family:"Aref Ruqaa";
+  src:url("../assets/fonts/ArefRuqaa-Bold.ttf") format("truetype");
+  font-weight:700;
+  font-style:normal;
+  font-display:swap;
+}
+
+/* =========================================================
    iServe — design tokens
    ========================================================= */
 :root{
@@ -6,6 +25,7 @@
   --navy-deep:   #071F38;
   --orange:      #FE8C1C;
   --orange-deep: #E87608;
+  --gold:        #C6971D;
   --peach:       #FDCB98;
   --green:       #88A75C;
   --cream:       #FBF6EE;
@@ -252,6 +272,25 @@ p{ margin:0; }
   background: rgba(136,167,92,.14); padding:6px 16px; border-radius:999px;
   margin-bottom:18px; letter-spacing:.3px;
 }
+
+.hero-note{
+  position:relative; display:inline-block;
+  margin: 4px 0 30px; padding: 42px 78px;
+  max-width:480px;
+}
+.hero-note-circle{
+  position:absolute; inset:0; z-index:0; pointer-events:none;
+}
+.hero-note-circle svg{ width:100%; height:100%; display:block; }
+.hero-note-text{
+  position:relative; z-index:1; display:block;
+  font-family:var(--font-hand); font-weight:700;
+  font-size:20px; line-height:1.6; color:var(--navy);
+}
+@media (max-width:640px){
+  .hero-note{ padding:36px 46px; max-width:none; }
+  .hero-note-text{ font-size:21px; }
+}
 .hero h1{ font-size: clamp(34px, 5vw, 54px); font-weight:900; line-height:1.25; margin-bottom:22px; }
 .hero h1 .line{ display:block; }
 .line-orange{ color:var(--orange); position:relative; width:fit-content; }
@@ -278,6 +317,26 @@ p{ margin:0; }
   animation: scrollcue 1.8s ease infinite;
 }
 @keyframes scrollcue{ 0%{ opacity:0; transform:translateY(-6px);} 50%{ opacity:1; } 100%{ opacity:0; transform:translateY(10px);} }
+@media (max-width:640px){ .scroll-cue{ display:none; } }
+
+/* =========================================================
+   Vision & Mission
+   ========================================================= */
+.vm-grid{
+  display:grid; grid-template-columns:1fr; gap:20px; position:relative; z-index:1;
+}
+@media (min-width:760px){ .vm-grid{ grid-template-columns:repeat(2,1fr); } }
+.vm-card{
+  background:var(--paper); border:1px solid var(--line);
+  border-radius: var(--radius-lg); padding:34px 30px;
+  text-align:center; box-shadow: var(--shadow-card);
+}
+.vm-label{
+  display:inline-block; font-family:var(--font-display); font-weight:800;
+  font-size:13px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--orange); margin-bottom:14px;
+}
+.vm-card p{ font-size:19px; font-weight:700; line-height:1.7; color:var(--navy); }
 
 /* =========================================================
    Feature grid (why iServe)
@@ -300,6 +359,27 @@ article.feature-card:hover{ transform:translateY(-6px) scale(1.045); box-shadow:
 .feature-card p{ font-size:14px; line-height:1.8; color:var(--ink-soft); }
 
 /* =========================================================
+   How it works (steps)
+   ========================================================= */
+.steps-grid{
+  display:grid; grid-template-columns:1fr; gap:22px; position:relative; z-index:1;
+}
+@media (min-width:760px){ .steps-grid{ grid-template-columns:repeat(4,1fr); } }
+.step-card{
+  position:relative; background:var(--paper); border:1px solid var(--line);
+  border-radius: var(--radius-md); padding:32px 22px 26px; text-align:center;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+article.step-card:hover{ transform:translateY(-6px) scale(1.045); box-shadow:var(--shadow-card); border-color:transparent; }
+.step-num{
+  display:flex; align-items:center; justify-content:center;
+  width:34px; height:34px; margin:0 auto 16px; border-radius:50%;
+  background:var(--navy); color:#fff; font-weight:800; font-size:15px;
+}
+.step-card h3{ font-size:16px; margin-bottom:8px; }
+.step-card p{ font-size:14px; line-height:1.8; color:var(--ink-soft); }
+
+/* =========================================================
    Extra services
    ========================================================= */
 .extra-grid{
@@ -318,6 +398,24 @@ article.extra-card:hover{ transform: translateY(-5px) scale(1.04); box-shadow: 0
 .extra-icon{ width:52px; height:52px; object-fit:contain; flex-shrink:0; }
 .extra-card h3{ font-size:16px; margin-bottom:8px; }
 .extra-card p{ font-size:13.5px; line-height:1.75; color:var(--ink-soft); }
+
+/* =========================================================
+   Results strip
+   ========================================================= */
+.results-strip{ padding-block:50px; text-align:center; }
+.results-label{
+  font-weight:800; font-size:13px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--orange); margin-bottom:18px;
+}
+.results-row{
+  display:flex; flex-wrap:wrap; justify-content:center; align-items:center;
+  gap:14px 0; font-weight:800; font-size:18px; color:var(--navy);
+}
+.results-row li{ position:relative; padding-inline:20px; }
+.results-row li + li::before{
+  content:"|"; position:absolute; inset-inline-start:-2px; color:var(--line); font-weight:400;
+}
+@media (max-width:640px){ .results-row{ font-size:15px; } .results-row li{ padding-inline:12px; } }
 
 /* =========================================================
    CTA banner
